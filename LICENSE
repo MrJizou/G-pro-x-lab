@@ -1,0 +1,59 @@
+PRO X Lab - Proprietary License (NOT open source)
+PRO X Lab - Tescilli Lisans (açık kaynak DEĞİLDİR)
+
+Copyright (c) 2026 the PRO X Lab project owner. All rights reserved.
+
+This software is NOT released under an open-source license. Nothing in this
+repository, release or documentation grants you any right except those listed
+in section 1. Viewing or downloading a file does not grant any additional right.
+
+1. PERMITTED USE
+   You may use the officially released, unmodified PRO X Lab application, free
+   of charge, for personal, non-commercial diagnosis of YOUR OWN Logitech
+   PRO X Wireless headset and receiver.
+
+2. RESTRICTIONS
+   Unless the project owner gives you written permission, you may NOT:
+   a) copy, publish, upload, mirror, redistribute, sublicense, sell or rent the
+      application, its source code or documentation;
+   b) modify the software or create derivative works, or fork or reuse any part
+      of the source code in another project;
+   c) use the software or its source code to query, modify or analyse any
+      device, firmware or software you do not own, or to build tools for doing so;
+   d) use the software for any commercial service;
+   e) remove or alter copyright, license or notices;
+   f) reverse engineer, decompile or disassemble the software, except to the
+      extent applicable law expressly allows despite this restriction.
+   You may keep one backup copy of the released application for your own use.
+
+3. SOURCE ACCESS
+   If the source code is visible to you, it is only because the project owner
+   has invited you. You may use it solely to review its safety and correctness.
+   Do not share it, or any excerpt, with anyone else.
+
+4. THIRD-PARTY NAMES
+   Logitech and PRO X are names of their owners and identify device
+   compatibility only. This project is not affiliated with, endorsed by, or
+   published by Logitech. No Logitech software, firmware or branding is included.
+
+5. NO WARRANTY, LIMIT OF LIABILITY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED. THE SOFTWARE SENDS READ-ONLY QUERIES TO USB DEVICES; DEVICE
+   BEHAVIOUR CANNOT BE GUARANTEED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE
+   PROJECT OWNER IS NOT LIABLE FOR ANY CLAIM, DAMAGE OR LOSS ARISING FROM THE
+   SOFTWARE OR ITS USE.
+
+6. TERMINATION
+   Your rights end automatically if you breach this license. Then you must stop
+   using the software and delete all copies you hold.
+
+--- Türkçe özet (bağlayıcı metin yukarıdaki İngilizce metindir) ---
+Bu yazılım açık kaynak değildir. Yalnızca resmî, değiştirilmemiş uygulamayı,
+KENDİ Logitech PRO X Wireless kulaklığınızı ve alıcınızı teşhis etmek için,
+kişisel ve ticari olmayan amaçla ücretsiz kullanabilirsiniz. Uygulamayı, kaynak
+kodunu veya belgeleri kopyalayamaz, paylaşamaz, değiştiremez, başka projede
+kullanamaz; sahibi olmadığınız cihaz veya yazılımları sorgulamak, değiştirmek
+ya da incelemek için kullanamazsınız. Kaynak kod size yalnızca proje sahibinin
+daveti nedeniyle görünüyorsa, onu yalnızca güvenlik ve doğruluk incelemesi için
+kullanabilir ve kimseyle paylaşamazsınız. Yazılım "olduğu gibi" sunulur. Logitech
+ile bağlantı yoktur.
