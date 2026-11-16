@@ -18,7 +18,7 @@ Verify your download in PowerShell before opening it:
 Get-FileHash .\ProXLab-2.0.1.zip -Algorithm SHA256
 ```
 
-This repository contains only the finished download and its documentation; it does not contain source code. This is proprietary software, not open source: see [LICENSE](LICENSE).
+The source code is in `src` so you can read it and build it yourself with `build.cmd` (Windows with .NET Framework 4.8, no extra tools) to run its `--self-test`. This is proprietary software, not open source: the source is for review and verification only, see [LICENSE](LICENSE).
 
 ## What it does
 

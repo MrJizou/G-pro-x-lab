@@ -18,7 +18,7 @@ Açmadan önce indirdiğiniz dosyayı PowerShell'de doğrulayın:
 Get-FileHash .\ProXLab-2.0.1.zip -Algorithm SHA256
 ```
 
-Bu depo yalnızca hazır indirmeyi ve belgelerini içerir; kaynak kodu içermez. Bu yazılım özel mülkiyetlidir, açık kaynak değildir: bkz. [LICENSE](LICENSE).
+Kaynak kod `src` klasöründedir; okuyabilir ve `build.cmd` ile (Windows ve .NET Framework 4.8 yeterlidir, ek araç gerekmez) kendiniz derleyip `--self-test` ile deneyebilirsiniz. Bu yazılım özel mülkiyetlidir, açık kaynak değildir: kaynak yalnızca inceleme ve doğrulama içindir, bkz. [LICENSE](LICENSE).
 
 ## Ne yapar?
 
