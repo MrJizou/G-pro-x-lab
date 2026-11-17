@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.3 — 2026-11-17
+
+- Rename the application to G PRO X Lab, including window titles, reports, exports, assembly metadata and executable/package names.
+- Preserve the legacy `%LOCALAPPDATA%\ProXLab` data directory for existing sessions and comparisons.
+- Refresh Turkish/English previews and retain System32 DLL import protection.
+
+
 ## 2.0.2 — 2026-11-17
 
 - Limit all application P/Invoke DLL imports to Windows System32.

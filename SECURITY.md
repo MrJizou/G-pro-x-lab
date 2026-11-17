@@ -1,6 +1,6 @@
 # Security and privacy notes
 
-PRO X Lab is a read-only diagnostic tool. It has no firmware-write, reset, shell-command, remote-control or telemetry feature, and it makes no network connection.
+G PRO X Lab is a read-only diagnostic tool. It has no firmware-write, reset, shell-command, remote-control or telemetry feature, and it makes no network connection.
 
 Report a problem (for example a query that behaves unexpectedly, or personal data that appears in a record) to the repository owner using GitHub's private reporting option when available. Do not attach unredacted personal logs to public issues.
 

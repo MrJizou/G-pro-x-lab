@@ -8,7 +8,7 @@ if not exist "%LAB_CSC%" (
   exit /b 1
 )
 if not exist bin mkdir bin
-"%LAB_CSC%" /nologo /target:winexe /out:bin\ProXLab.exe /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.Web.Extensions.dll src\UiKit.cs src\Core.cs src\Hid.cs src\MainForm.cs src\Program.cs
+"%LAB_CSC%" /nologo /target:winexe /out:bin\GProXLab.exe /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.Web.Extensions.dll src\UiKit.cs src\Core.cs src\Hid.cs src\MainForm.cs src\Program.cs
 if errorlevel 1 exit /b 1
-echo Built bin\ProXLab.exe
+echo Built bin\GProXLab.exe
 exit /b 0

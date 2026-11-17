@@ -1,4 +1,4 @@
-# PRO X Lab 2.0.2
+# G PRO X Lab 2.0.3
 
 İlk nesil Logitech PRO X Wireless kulaklıklar ve alıcıları için salt okunur bağlantı teşhis aracıdır. Kulaklık şarj olurken oluşan USB kopmalarını kaydeder, kulaklığın bildirdiği pil gerilimini ve tahmini pil yüzdesini gösterir, kişisel tanımlayıcı içermeyen bir destek raporu üretir.
 
@@ -8,14 +8,14 @@
 
 ## İndirme
 
-**[ProXLab-2.0.2.zip](downloads/ProXLab-2.0.2.zip)** (dosya sayfasındaki **Download raw file** düğmesini kullanın)
+**[GProXLab-2.0.3.zip](downloads/GProXLab-2.0.3.zip)** (dosya sayfasındaki **Download raw file** düğmesini kullanın)
 
-SHA-256: `9c9132d924592f8bcf8a153579c6b29e17e41485c2d37809a9a92a77e701c196`
+SHA-256: `d6979e459c1e05b4da7fb455924c6ec15cd48743adc3381df7f8b86dc3f1e700`
 
 Açmadan önce indirdiğiniz dosyayı PowerShell'de doğrulayın:
 
 ```powershell
-Get-FileHash .\ProXLab-2.0.2.zip -Algorithm SHA256
+Get-FileHash .\GProXLab-2.0.3.zip -Algorithm SHA256
 ```
 
 Kaynak kod `src` klasöründedir; okuyabilir ve `build.cmd` ile (Windows ve .NET Framework 4.8 yeterlidir, ek araç gerekmez) kendiniz derleyip `--self-test` ile deneyebilirsiniz. Bu yazılım özel mülkiyetlidir, açık kaynak değildir: kaynak yalnızca inceleme ve doğrulama içindir, bkz. [LICENSE](LICENSE).
@@ -30,7 +30,7 @@ Kaynak kod `src` klasöründedir; okuyabilir ve `build.cmd` ile (Windows ve .NET
 
 ## Aygıtlarınıza ne gönderir?
 
-PRO X Lab hiçbir zaman firmware yazmaz, aygıtı sıfırlamaz veya devre dışı bırakmaz. İki tür salt okunur sorgu gönderir:
+G PRO X Lab hiçbir zaman firmware yazmaz, aygıtı sıfırlamaz veya devre dışı bırakmaz. İki tür salt okunur sorgu gönderir:
 
 - **Pil sorgusu:** alıcının üretici arayüzüne 20 baytlık bir HID raporu. Otomatik okumayı kapatmadığınız sürece 10 saniyede bir, ayrıca *Pili şimdi oku* düğmesine bastığınızda gönderilir.
 - **Sürüm sorgusu:** yalnızca *Sürümleri oku* düğmesine bastığınızda; alıcıya ve kulaklığın USB arayüzüne radyo firmware sürümünü okumak için bir HID özellik (feature) raporu.
@@ -44,7 +44,7 @@ PRO X Lab hiçbir zaman firmware yazmaz, aygıtı sıfırlamaz veya devre dış�
 
 ## Çalıştırma
 
-Windows 10/11 ve .NET Framework 4.8 gerekir. ZIP dosyasını çıkarın ve `ProXLab.exe` dosyasını açın. Durum satırı erişim hatası bildirirse alıcıyı kullanan diğer programları kapatıp yeniden deneyin. PRO X Lab'ın yönetici olarak çalıştırılması önerilmez: program imzasızdır ve hesabınızdaki diğer yazılımların yazabildiği bir klasörden çalışır.
+Windows 10/11 ve .NET Framework 4.8 gerekir. ZIP dosyasını çıkarın ve `GProXLab.exe` dosyasını açın. Durum satırı erişim hatası bildirirse alıcıyı kullanan diğer programları kapatıp yeniden deneyin. G PRO X Lab'ın yönetici olarak çalıştırılması önerilmez: program imzasızdır ve hesabınızdaki diğer yazılımların yazabildiği bir klasörden çalışır.
 
 1. Kulaklığın alıcısını takın. İsterseniz kulaklığın USB kablosunu da şarj için bağlayın.
 2. **Test grubu** menüsünden *Sorunlu kulaklık* veya *Sağlam kulaklık* seçin; **Şarj kaynağı notu** ile nasıl beslendiğini (PC USB, priz adaptörü, powerbank) kaydedin.

@@ -1,4 +1,4 @@
-# PRO X Lab 2.0.2
+# G PRO X Lab 2.0.3
 
 Read-only connection diagnostics for first-generation Logitech PRO X Wireless headsets and their receivers. It records USB disconnects while the headset charges, shows the battery voltage the headset reports and an estimated percentage, and produces a support report that contains no personal identifiers.
 
@@ -8,14 +8,14 @@ Read-only connection diagnostics for first-generation Logitech PRO X Wireless he
 
 ## Download
 
-**[ProXLab-2.0.2.zip](downloads/ProXLab-2.0.2.zip)** (use the **Download raw file** button on the file page)
+**[GProXLab-2.0.3.zip](downloads/GProXLab-2.0.3.zip)** (use the **Download raw file** button on the file page)
 
-SHA-256: `9c9132d924592f8bcf8a153579c6b29e17e41485c2d37809a9a92a77e701c196`
+SHA-256: `d6979e459c1e05b4da7fb455924c6ec15cd48743adc3381df7f8b86dc3f1e700`
 
 Verify your download in PowerShell before opening it:
 
 ```powershell
-Get-FileHash .\ProXLab-2.0.2.zip -Algorithm SHA256
+Get-FileHash .\GProXLab-2.0.3.zip -Algorithm SHA256
 ```
 
 The source code is in `src` so you can read it and build it yourself with `build.cmd` (Windows with .NET Framework 4.8, no extra tools) to run its `--self-test`. This is proprietary software, not open source: the source is for review and verification only, see [LICENSE](LICENSE).
@@ -30,7 +30,7 @@ The source code is in `src` so you can read it and build it yourself with `build
 
 ## What it sends to your devices
 
-PRO X Lab never writes firmware, resets a device or disables one. It sends two kinds of read-only queries:
+G PRO X Lab never writes firmware, resets a device or disables one. It sends two kinds of read-only queries:
 
 - **Battery query:** a 20-byte HID report to the receiver's vendor interface, every 10 seconds unless you switch automatic reading off, or when you press *Read battery now*.
 - **Version query:** only when you press *Read versions*: a HID feature report to the receiver and to the headset's USB interface, to read their radio firmware version.
@@ -44,7 +44,7 @@ Both run in a short-lived helper process that is stopped if a driver call hangs.
 
 ## Run
 
-Requires Windows 10/11 and .NET Framework 4.8. Extract the ZIP and open `ProXLab.exe`. If the status line reports an access error, close any other program that uses the receiver and try again. Running PRO X Lab as administrator is not recommended: it is unsigned and runs from a folder that other software in your account can write to.
+Requires Windows 10/11 and .NET Framework 4.8. Extract the ZIP and open `GProXLab.exe`. If the status line reports an access error, close any other program that uses the receiver and try again. Running G PRO X Lab as administrator is not recommended: it is unsigned and runs from a folder that other software in your account can write to.
 
 1. Connect the headset's receiver. Optionally connect the headset's USB cable to charge it.
 2. In **Test group**, choose *Problem headset* or *Healthy headset*; use **Charging source note** to record how it is powered (PC USB, wall adapter, power bank).
