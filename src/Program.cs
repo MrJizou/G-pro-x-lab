@@ -8,6 +8,8 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
+// All native imports in this assembly are Windows system libraries.
+[assembly: System.Runtime.InteropServices.DefaultDllImportSearchPaths(System.Runtime.InteropServices.DllImportSearchPath.System32)]
 [assembly: AssemblyTitle("PRO X Lab")]
 [assembly: AssemblyDescription("Read-only connection diagnostics for Logitech PRO X Wireless headsets and receivers")]
 [assembly: AssemblyVersion("2.0.1.0")]
