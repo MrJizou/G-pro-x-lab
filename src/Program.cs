@@ -12,8 +12,8 @@ using System.Windows.Forms;
 [assembly: System.Runtime.InteropServices.DefaultDllImportSearchPaths(System.Runtime.InteropServices.DllImportSearchPath.System32)]
 [assembly: AssemblyTitle("PRO X Lab")]
 [assembly: AssemblyDescription("Read-only connection diagnostics for Logitech PRO X Wireless headsets and receivers")]
-[assembly: AssemblyVersion("2.0.1.0")]
-[assembly: AssemblyFileVersion("2.0.1.0")]
+[assembly: AssemblyVersion("2.0.2.0")]
+[assembly: AssemblyFileVersion("2.0.2.0")]
 
 namespace ProXLab {
  static class Program {
