@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-`ProXLab.exe --self-test` runs without any device and checks:
+`GProXLab.exe --self-test` runs without any device and checks:
 
 - battery frame, reply decoding, voltage-to-percentage estimate (including bounds and monotonic behaviour), charging / not-charging / unknown state, and rejection of unrelated or short replies;
 - radio-version reply decoding and rejection of a wrong reply;
@@ -11,7 +11,7 @@
 - **privacy guards:** the device model carries no serial-number member, the interface path is never serialized, and user name, machine name and profile paths are masked;
 - session round trip through JSON, Turkish and English support reports, CSV export.
 
-`ProXLab.exe --ui-test` renders the interface with sample data in Turkish and English at three window widths and in all four views, and checks for clipped text, overflow and overlapping blocks. It also registers the real Windows device notifications and feeds the real handler synthetic USB arrival and removal messages (duplicate removals, an unrelated device, a receiver removal) and checks the resulting events and summary.
+`GProXLab.exe --ui-test` renders the interface with sample data in Turkish and English at three window widths and in all four views, and checks for clipped text, overflow and overlapping blocks. It also registers the real Windows device notifications and feeds the real handler synthetic USB arrival and removal messages (duplicate removals, an unrelated device, a receiver removal) and checks the resulting events and summary.
 
 Both were confirmed to fail on deliberately broken builds: disabling duplicate suppression, swapping the charging flag, serializing the interface path, and shrinking text boxes each made a test fail.
 
