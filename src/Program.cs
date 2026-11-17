@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 // All native imports in this assembly are Windows system libraries.
 [assembly: System.Runtime.InteropServices.DefaultDllImportSearchPaths(System.Runtime.InteropServices.DllImportSearchPath.System32)]
-[assembly: AssemblyTitle("PRO X Lab")]
+[assembly: AssemblyTitle("G PRO X Lab")]
 [assembly: AssemblyDescription("Read-only connection diagnostics for Logitech PRO X Wireless headsets and receivers")]
-[assembly: AssemblyVersion("2.0.2.0")]
-[assembly: AssemblyFileVersion("2.0.2.0")]
+[assembly: AssemblyVersion("2.0.3.0")]
+[assembly: AssemblyFileVersion("2.0.3.0")]
 
-namespace ProXLab {
+namespace GProXLab {
  static class Program {
   [System.Runtime.InteropServices.DllImport("user32.dll")] static extern bool SetProcessDPIAware();
   static void Assert(bool value,string message){if(!value)throw new Exception(message);}
@@ -64,7 +64,7 @@ namespace ProXLab {
    var back=Json.Deserialize<SessionData>(Json.Serialize(s));Assert(back.Events.Count==6&&back.Samples.Count==2&&back.Unit=="problem"&&back.Events[0].Percent==40,"Session round trip");
    foreach(bool tr in new[]{true,false}){
     string rep=Reports.Build(s,sum,tr,"9.9.9","Windows test");
-    Assert(rep.Contains("PRO X Lab 9.9.9")&&rep.Contains("046D:0ABB")&&rep.Contains("(3")&&!rep.Contains(profile),"Report content and masking ("+(tr?"TR":"EN")+")");
+    Assert(rep.Contains("G PRO X Lab 9.9.9")&&rep.Contains("046D:0ABB")&&rep.Contains("(3")&&!rep.Contains(profile),"Report content and masking ("+(tr?"TR":"EN")+")");
    }
    Assert(Reports.SamplesCsv(s).Split('\n').Length>=3,"CSV export");
    // exported session is masked; the in-memory session is left untouched
@@ -126,7 +126,7 @@ namespace ProXLab {
     }
     bool tr2=System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName=="tr";
     Application.Run(new MainForm(a0=="--demo",tr2));return 0;
-   }catch(Exception e){if(args.Length>0)Console.Error.WriteLine(e.Message);else MessageBox.Show(e.Message,"PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Error);return 1;}
+   }catch(Exception e){if(args.Length>0)Console.Error.WriteLine(e.Message);else MessageBox.Show(e.Message,"G PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Error);return 1;}
   }
  }
 }

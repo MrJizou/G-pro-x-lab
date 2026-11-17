@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProXLab {
+namespace GProXLab {
  // Battery trend with disconnect markers.
  public sealed class Trend:Control {
   public List<Sample> Samples=new List<Sample>();
@@ -57,7 +57,7 @@ namespace ProXLab {
   public MainForm(bool demoMode,bool turkish){
    demo=demoMode;tr=turkish;
    using(var g=CreateGraphics())UI.K=g.DpiX/96f;
-   Text="PRO X Lab "+appVersion;AutoScaleMode=AutoScaleMode.None;BackColor=UI.Bg;ForeColor=UI.Text;Font=UI.Body;StartPosition=FormStartPosition.CenterScreen;
+   Text="G PRO X Lab "+appVersion;AutoScaleMode=AutoScaleMode.None;BackColor=UI.Bg;ForeColor=UI.Text;Font=UI.Body;StartPosition=FormStartPosition.CenterScreen;
    var wa=Screen.PrimaryScreen.WorkingArea;Size=new Size(Math.Min(P(1100),wa.Width-P(40)),Math.Min(P(860),wa.Height-P(40)));MinimumSize=new Size(Math.Min(P(780),wa.Width),Math.Min(P(560),wa.Height));
    data.AppVersion=appVersion;data.Started=started.ToString("o");
    if(demo)LoadDemo();
@@ -118,6 +118,7 @@ namespace ProXLab {
    data.Events.Add(e);SaveSession();RefreshAll();
   }
   void AddNote(string text){data.Notes.Add(new NoteEntry{Text=text});RefreshEvents();SaveSession();}
+  // Retain the legacy storage directory so existing sessions and comparison records stay available.
   string SessionRoot(){return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"ProXLab");}
   void OpenSessionFolder(){try{sessionFolder=Path.Combine(SessionRoot(),"Sessions",DateTime.Now.ToString("yyyyMMdd-HHmmss"));Directory.CreateDirectory(sessionFolder);}catch{sessionFolder=null;}}
   void SaveSession(){
@@ -183,7 +184,7 @@ namespace ProXLab {
     }
     if(needVersions){await ReadVersions(list);if(closing)return;}
     statusMode="ok";statusTime=DateTime.Now;SaveSession();
-   }catch(Exception ex){if(!closing){statusMode="error";AddNote(T("Okuma hatası: ","Read error: ")+ex.Message);if(needVersions){needVersions=false;MessageBox.Show(this,T("Sürüm sorgusu başlayamadı:\n","The version query could not start:\n")+ex.Message,"PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);}}}
+   }catch(Exception ex){if(!closing){statusMode="error";AddNote(T("Okuma hatası: ","Read error: ")+ex.Message);if(needVersions){needVersions=false;MessageBox.Show(this,T("Sürüm sorgusu başlayamadı:\n","The version query could not start:\n")+ex.Message,"G PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);}}}
    finally{busy=false;if(!closing){SetBusy(false);RefreshAll();}}
   }
   void SetBusy(bool b){btnBattery.Enabled=!b;btnVersion.Enabled=!b;btnVersion.Text=b&&needVersions?T("Okunuyor…","Reading…"):T("Sürümleri oku","Read versions");}
@@ -222,7 +223,7 @@ namespace ProXLab {
    scroller=new Panel{Dock=DockStyle.Fill,AutoScroll=true,BackColor=UI.Bg};content=new ContentPanel{BackColor=UI.Bg,Location=Point.Empty};scroller.Controls.Add(content);Controls.Add(scroller);scroller.Resize+=(s,e)=>DoLayout();
    language=B(tr?"English":"Türkçe",BtnKind.Ghost);language.AccessibleName=T("Dili değiştir","Change language");content.Controls.Add(language);
    language.Click+=(s,e)=>{if(busy)return;tr=!tr;var old=Controls[0];Controls.Remove(old);old.Dispose();Build();RefreshAll();DoLayout();};
-   title=L("PRO X Lab",UI.Title,UI.Text,UI.Bg);subtitle=L(T("Kulaklık ve alıcı bağlantısı teşhisi · şarj sırasındaki USB kopmalarını kaydeder","Headset and receiver connection diagnostics · records USB disconnects while charging"),UI.Body,UI.Muted,UI.Bg);status=L("",UI.Body,UI.Muted,UI.Bg);status.TextAlign=ContentAlignment.TopRight;
+   title=L("G PRO X Lab",UI.Title,UI.Text,UI.Bg);subtitle=L(T("Kulaklık ve alıcı bağlantısı teşhisi · şarj sırasındaki USB kopmalarını kaydeder","Headset and receiver connection diagnostics · records USB disconnects while charging"),UI.Body,UI.Muted,UI.Bg);status=L("",UI.Body,UI.Muted,UI.Bg);status.TextAlign=ContentAlignment.TopRight;
    content.Controls.Add(title);content.Controls.Add(subtitle);content.Controls.Add(status);
    // connection card
    connCard=new CardPanel();content.Controls.Add(connCard);recvIcon=new StatusIcon();usbIcon=new StatusIcon();recvLabel=L("",UI.Body,UI.Text,UI.Surface);usbLabel=L("",UI.Body,UI.Text,UI.Surface);
@@ -390,10 +391,10 @@ namespace ProXLab {
    return Reports.Build(data,Summary(),tr,appVersion,Privacy.WindowsInfo());
   }
   void DoExport(string kind){
-   using(var d=new SaveFileDialog{FileName="ProXLab-"+DateTime.Now.ToString("yyyyMMdd-HHmm")+"."+kind,Filter=kind=="txt"?"Text (*.txt)|*.txt":(kind=="json"?"JSON (*.json)|*.json":"CSV (*.csv)|*.csv"),Title=T("Dışa aktar","Export")}){
+   using(var d=new SaveFileDialog{FileName="GProXLab-"+DateTime.Now.ToString("yyyyMMdd-HHmm")+"."+kind,Filter=kind=="txt"?"Text (*.txt)|*.txt":(kind=="json"?"JSON (*.json)|*.json":"CSV (*.csv)|*.csv"),Title=T("Dışa aktar","Export")}){
     if(d.ShowDialog(this)!=DialogResult.OK)return;
     try{File.WriteAllText(d.FileName,BuildContent(kind),new UTF8Encoding(kind=="txt"));AddNote(T("Dışa aktarıldı: ","Exported: ")+kind.ToUpperInvariant());}
-    catch(Exception ex){MessageBox.Show(this,ex.Message,"PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Warning);}
+    catch(Exception ex){MessageBox.Show(this,ex.Message,"G PRO X Lab",MessageBoxButtons.OK,MessageBoxIcon.Warning);}
    }
   }
 

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Microsoft.Win32.SafeHandles;
 
-namespace ProXLab {
+namespace GProXLab {
  public static class Json {
   static readonly JavaScriptSerializer Ser=new JavaScriptSerializer{MaxJsonLength=100000000};
   public static string Serialize(object value){return Ser.Serialize(value);}

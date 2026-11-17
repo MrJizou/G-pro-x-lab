@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
 using Microsoft.Win32;
 
-namespace ProXLab {
+namespace GProXLab {
  // ---------- Identifiers ----------
  public static class Ids {
   public const string ReceiverKey="046D:0ABA",HeadsetUsbKey="046D:0ABB",ReceiverBootKey="170D:0100",HeadsetBootKey="170D:0101";
@@ -179,7 +179,7 @@ namespace ProXLab {
   public static string Build(SessionData s,DisconnectSummary d,bool tr,string appVersion,string windowsInfo){
    var sb=new StringBuilder();
    Func<string,string,string> T=(a,b)=>tr?a:b;
-   sb.AppendLine("PRO X Lab "+appVersion+" — "+T("Bağlantı teşhis raporu","Connection diagnostic report"));
+   sb.AppendLine("G PRO X Lab "+appVersion+" — "+T("Bağlantı teşhis raporu","Connection diagnostic report"));
    sb.AppendLine("Windows: "+windowsInfo);
    sb.AppendLine(T("Test grubu: ","Test group: ")+UnitLabel(s.Unit,tr)+"   "+T("Şarj kaynağı notu: ","Charging source note: ")+SourceLabel(s.Source,tr));
    var st=Analysis.ParseTime(s.Started);var en=Analysis.ParseTime(s.Ended);

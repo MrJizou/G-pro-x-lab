@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace ProXLab {
+namespace GProXLab {
  // ---------- Design tokens (dark, navy + teal; text contrast >= 4.5:1 on every surface) ----------
  static class UI {
   public static float K=1f;
