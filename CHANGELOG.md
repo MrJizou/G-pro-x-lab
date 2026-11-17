@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.2 — 2026-11-17
+
+- Limit all application P/Invoke DLL imports to Windows System32.
+- Verify DLL substitution rejection and retain existing diagnostics/privacy self-tests.
+
+
 ## 2.0.1 — privacy and input hardening
 
 - The JSON and CSV exports are now masked like the support report (user name, machine name, profile path). Before this, only the text report was masked, although the documentation said all exports were.

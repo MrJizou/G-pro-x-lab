@@ -21,3 +21,7 @@ Report a problem (for example a query that behaves unexpectedly, or personal dat
 ## Supply chain
 
 The repository's build workflow uses actions pinned to commit hashes, read-only repository permission and no secrets. Releases should list the SHA-256 of every file.
+
+## 2.0.2 native DLL search
+
+All application P/Invoke imports are limited to Windows System32. A regression test using a real Windows library substituted as hid.dll reproduced the old search-path issue and passed after the fix. This does not prevent replacement of the unsigned application itself; administrator rights remain unnecessary.

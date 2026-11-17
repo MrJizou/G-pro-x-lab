@@ -1,4 +1,4 @@
-# PRO X Lab 2.0.1
+# PRO X Lab 2.0.2
 
 İlk nesil Logitech PRO X Wireless kulaklıklar ve alıcıları için salt okunur bağlantı teşhis aracıdır. Kulaklık şarj olurken oluşan USB kopmalarını kaydeder, kulaklığın bildirdiği pil gerilimini ve tahmini pil yüzdesini gösterir, kişisel tanımlayıcı içermeyen bir destek raporu üretir.
 
@@ -8,14 +8,14 @@
 
 ## İndirme
 
-**[ProXLab-2.0.1.zip](downloads/ProXLab-2.0.1.zip)** (dosya sayfasındaki **Download raw file** düğmesini kullanın)
+**[ProXLab-2.0.2.zip](downloads/ProXLab-2.0.2.zip)** (dosya sayfasındaki **Download raw file** düğmesini kullanın)
 
-SHA-256: `8014a45051ad50bdbd0887034ec91695a33118c420db95f14e7818b481cf0de6`
+SHA-256: `9c9132d924592f8bcf8a153579c6b29e17e41485c2d37809a9a92a77e701c196`
 
 Açmadan önce indirdiğiniz dosyayı PowerShell'de doğrulayın:
 
 ```powershell
-Get-FileHash .\ProXLab-2.0.1.zip -Algorithm SHA256
+Get-FileHash .\ProXLab-2.0.2.zip -Algorithm SHA256
 ```
 
 Kaynak kod `src` klasöründedir; okuyabilir ve `build.cmd` ile (Windows ve .NET Framework 4.8 yeterlidir, ek araç gerekmez) kendiniz derleyip `--self-test` ile deneyebilirsiniz. Bu yazılım özel mülkiyetlidir, açık kaynak değildir: kaynak yalnızca inceleme ve doğrulama içindir, bkz. [LICENSE](LICENSE).

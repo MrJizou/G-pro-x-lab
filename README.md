@@ -1,4 +1,4 @@
-# PRO X Lab 2.0.1
+# PRO X Lab 2.0.2
 
 Read-only connection diagnostics for first-generation Logitech PRO X Wireless headsets and their receivers. It records USB disconnects while the headset charges, shows the battery voltage the headset reports and an estimated percentage, and produces a support report that contains no personal identifiers.
 
@@ -8,14 +8,14 @@ Read-only connection diagnostics for first-generation Logitech PRO X Wireless he
 
 ## Download
 
-**[ProXLab-2.0.1.zip](downloads/ProXLab-2.0.1.zip)** (use the **Download raw file** button on the file page)
+**[ProXLab-2.0.2.zip](downloads/ProXLab-2.0.2.zip)** (use the **Download raw file** button on the file page)
 
-SHA-256: `8014a45051ad50bdbd0887034ec91695a33118c420db95f14e7818b481cf0de6`
+SHA-256: `9c9132d924592f8bcf8a153579c6b29e17e41485c2d37809a9a92a77e701c196`
 
 Verify your download in PowerShell before opening it:
 
 ```powershell
-Get-FileHash .\ProXLab-2.0.1.zip -Algorithm SHA256
+Get-FileHash .\ProXLab-2.0.2.zip -Algorithm SHA256
 ```
 
 The source code is in `src` so you can read it and build it yourself with `build.cmd` (Windows with .NET Framework 4.8, no extra tools) to run its `--self-test`. This is proprietary software, not open source: the source is for review and verification only, see [LICENSE](LICENSE).
